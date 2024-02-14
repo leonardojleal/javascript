@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <h1>Eleições</h1>
+      <p>Coloque sua idade e verifique qual sua situação eleitoral.</p>
+    <input type="text" name="vto" id="vto">
+    <input type="button" value="Verifique" onclick="calcular()">
+    <div id="res">
+
+    </div>
+       <script>
+        function calcular(){
+             var vtoi =window.document.querySelector('input#vto')
+             var res =window.document.querySelector('div#res')
+             var idade =(vto.value) 
+
+             res.innerHTML = `<p>Sua situação atual é ${vtoi}</p>`
+
+             if (idade < 16){
+                res.innerHTML = `<p><strong>Não Vota!!</strong></p>`
+             }else if(idade <18 || idade >65){
+                res.innerHTML =`<p><strong>Voto Opcional!!</strong></p>`
+             }else if(idade >=18){
+                res.innerHTML = `<p><strong>Voto Obrigatório!!</strong></p>`
+             }
+        }
+    </script>
+
+</body>
+</html>
